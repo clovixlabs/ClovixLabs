@@ -1,0 +1,910 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clovix - Digital Agency</title>
+    <link rel="icon" type="image/png" href="assets/images/clovix.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Framer Motion CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.0.8/dist/framer-motion.js"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6255e7",
+              "primary-hover": "#5044c9",
+              "background-light": "#f6f6f8",
+              "background-dark": "#131121",
+              "card-dark": "#1c1a2e",
+              "border-dark": "#2d2a4a",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white"
+  >
+    <header
+      class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-[#282546] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/white-clovix.png"
+              alt="Clovix Logo"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex gap-8 items-center">
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <div class="nav-dropdown">
+              <a
+                class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                >Services</a
+              >
+              <div class="nav-dropdown-menu">
+                <a href="development.html" class="nav-dropdown-item"
+                  >Development</a
+                >
+                <a href="branding.html" class="nav-dropdown-item"
+                  >Branding & Design</a
+                >
+                <a href="marketing.html" class="nav-dropdown-item">Marketing</a>
+              </div>
+            </div>
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="projects.html"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="about.html"
+              >About</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+            >
+              Request a Quote
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-toggle"
+              class="text-slate-600 dark:text-white p-2"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+        <div
+          class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-50 translate-x-1/3 -translate-y-1/4"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] opacity-30 -translate-x-1/2 translate-y-1/4"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div
+              class="flex flex-col items-start gap-6 max-w-2xl relative z-10 animate-fade-in"
+            >
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-sm"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                ></span>
+                Digital Agency v2.0
+              </div>
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white"
+              >
+                Innovative Digital Solutions for
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400"
+                  >Scalable Brands</span
+                >
+              </h1>
+              <p
+                class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg"
+              >
+                We build digital experiences that drive growth and future-proof
+                your business through cutting-edge design and technology.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a href="contact.html"
+                  ><button
+                    class="bg-primary hover:bg-primary-hover text-white h-12 px-8 rounded-lg text-base font-bold transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2"
+                  >
+                    Request a Quote
+                    <span class="material-symbols-outlined !text-[20px]"
+                      >arrow_forward</span
+                    >
+                  </button></a
+                >
+              </div>
+            </div>
+            <div
+              class="relative w-full aspect-square lg:aspect-[4/3] perspective-1000 group animate-slide-right"
+            >
+              <div
+                class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary to-purple-500 rounded-2xl opacity-20 blur-xl animate-pulse"
+              ></div>
+              <div
+                class="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/30 rounded-full blur-2xl"
+              ></div>
+              <div
+                class="relative h-full rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border border-white/10 dark:border-white/5 bg-slate-900"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-overlay z-10 pointer-events-none"
+                ></div>
+                <div
+                  class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                  data-alt="Abstract 3D purple and blue flowing geometric liquid shapes in a dark space"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB4lmgsG5XbI3RmdM_oG4GgC7mpQEUDl4XNSX3RJ3kFXa5wr3Z0MlNvJNpQD2gUfHRoS3pFdApdtSKmIB7IVpl9_inKWCsWzle7IZl5w_YIZtNMvTKjoIKUjXepDzY32WPRrgXdawgA1sJt2KMn7htn4g4RyecLpucoZyJ7vY4FgekaMg0jkD-AZutF8ZBjHu2yCrKHILHDfJg0ZUzpFiSzCpfQ0Wgt8DL6A7UkoU30decQDYqZGpF0aWqHlAOL4H_4y2v54IaPMQ8&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border border-white/20 z-20 flex items-center gap-4 shadow-lg"
+                >
+                  <div
+                    class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white shadow-lg shadow-primary/40"
+                  >
+                    <span class="material-symbols-outlined">rocket_launch</span>
+                  </div>
+                  <div>
+                    <p
+                      class="text-xs text-white/60 uppercase tracking-wide font-semibold"
+                    >
+                      Latest Achievement
+                    </p>
+                    <p class="text-white font-bold text-sm">
+                      Best Digital Agency 2024
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-12 border-y border-slate-200 dark:border-[#282546] bg-slate-50 dark:bg-[#18162b] relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] pointer-events-none"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-[#282546]"
+          >
+            <div
+              class="flex flex-col items-center gap-2 p-4 group cursor-default"
+            >
+              <span
+                class="text-5xl lg:text-6xl font-black text-slate-900 dark:text-white group-hover:text-primary transition-colors text-glow"
+                >500+</span
+              >
+              <span
+                class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest flex items-center gap-2"
+              >
+                Projects Completed
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 p-4 group cursor-default"
+            >
+              <span
+                class="text-5xl lg:text-6xl font-black text-slate-900 dark:text-white group-hover:text-primary transition-colors text-glow"
+                >98%</span
+              >
+              <span
+                class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest flex items-center gap-2"
+              >
+                Happy Clients
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 p-4 group cursor-default"
+            >
+              <span
+                class="text-5xl lg:text-6xl font-black text-slate-900 dark:text-white group-hover:text-primary transition-colors text-glow"
+                >300%</span
+              >
+              <span
+                class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest flex items-center gap-2"
+              >
+                Avg ROI Increase
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Expertise Section -->
+      <section class="py-24 bg-background-dark relative">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mb-16 md:text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Our Expertise
+            </h2>
+            <p class="text-text-secondary text-lg">
+              We provide a comprehensive suite of digital services designed to
+              scale your business and engage your audience.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Service Card 1 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">code</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">Web Development</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Custom, responsive websites built with modern frameworks like
+                  React and Next.js for speed and SEO.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="development.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Service Card 2 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">smartphone</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">App Development</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Native and cross-platform mobile applications that provide
+                  seamless user experiences on iOS and Android.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="development.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Service Card 3 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">campaign</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">Digital Marketing</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Data-driven strategies including PPC, social media, and
+                  content marketing to boost your ROI.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="marketing.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Service Card 4 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">SEO Optimization</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Improve your search rankings and drive organic traffic with
+                  our comprehensive technical SEO audits.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="marketing.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Service Card 5 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">brush</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">Graphic Design</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Branding, UI/UX design, and visual identities that resonate
+                  with your target audience.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="branding.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+            <!-- Service Card 6 -->
+            <div
+              class="group relative bg-[#1c1b29] p-8 rounded-2xl border border-[#2b2938] hover:border-primary/50 transition-colors duration-300 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div class="relative z-10 flex flex-col items-start gap-4">
+                <div
+                  class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                >
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <h3 class="text-xl font-bold text-white">
+                  Analytics &amp; Data
+                </h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Deep insights into user behavior and campaign performance to
+                  inform your next strategic move.
+                </p>
+                <a
+                  class="inline-flex items-center text-sm font-bold text-primary mt-2 group-hover:gap-2 transition-all"
+                  href="marketing.html"
+                >
+                  Learn more
+                  <span class="material-symbols-outlined text-[16px] ml-1"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-20 bg-slate-50 dark:bg-[#18162b] border-y border-slate-200 dark:border-[#282546]"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4 dark:text-white">
+              Why Choose Clovix
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              We don't just deliver projects; we deliver results that matter to
+              your bottom line.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1"
+            >
+              <div
+                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined">psychology</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 dark:text-white">
+                Strategic Thinking
+              </h3>
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+              >
+                We align technology with your business goals for maximum impact.
+              </p>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1"
+            >
+              <div
+                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined">rocket</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 dark:text-white">
+                Agile Delivery
+              </h3>
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+              >
+                Rapid iteration and deployment to keep you ahead of the
+                competition.
+              </p>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1"
+            >
+              <div
+                class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-lg flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined">security</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 dark:text-white">
+                Enterprise Security
+              </h3>
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+              >
+                Bank-grade security protocols integrated into every solution we
+                build.
+              </p>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1"
+            >
+              <div
+                class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-lg flex items-center justify-center mb-4"
+              >
+                <span class="material-symbols-outlined">support_agent</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 dark:text-white">
+                24/7 Support
+              </h3>
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed"
+              >
+                Dedicated support teams available round-the-clock to ensure
+                uptime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section
+        class="py-20 bg-background-light dark:bg-background-dark overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-end mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold dark:text-white">
+              Client Success Stories
+            </h2>
+            <div class="flex gap-2">
+              <button
+                class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors dark:text-white"
+              >
+                <span class="material-symbols-outlined">arrow_back</span>
+              </button>
+              <button
+                class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center bg-primary text-white border-primary shadow-lg shadow-primary/25"
+              >
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="p-8 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-lg dark:shadow-none relative"
+            >
+              <span
+                class="material-symbols-outlined absolute top-8 right-8 text-6xl text-slate-100 dark:text-slate-800 -z-0"
+                >format_quote</span
+              >
+              <div class="relative z-10">
+                <div class="flex gap-1 text-yellow-400 mb-6">
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                </div>
+                <p
+                  class="text-lg text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed"
+                >
+                  "Clovix transformed our digital presence completely. Their
+                  team's attention to detail and technical expertise is
+                  unmatched in the industry. The ROI we've seen is incredible."
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    alt="Sarah J."
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlCtSqFQ-Q2V2C-zwRQLFhrOkHD2JnGNWbp8uK_teCfx-ouvyKCHPtf0PAeETxQGwdRWv_A-dTgFovtKuCAbFpxNsB4ydqxxsDBuStqVlqW1IR2hkqPiueZkoQJKVKgUKyhLF7XERArB5I3MC_9HUncDGRy5FBNH5E4EfKwWj9PzMoZGpmzgvkKsjDkeJ00IRwyDjwdGJZqVqZB7s3WbKCeY1SW8BKtJFKSiFi2bpXF197LuE0kMGUwWE0yJdzqb2IHcwLbhIuj8"
+                  />
+                  <div>
+                    <h4 class="font-bold dark:text-white">Sarah Johnson</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                      CTO, TechFlow Inc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-8 rounded-2xl bg-white dark:bg-card-dark border border-slate-100 dark:border-border-dark shadow-lg dark:shadow-none relative hidden md:block"
+            >
+              <span
+                class="material-symbols-outlined absolute top-8 right-8 text-6xl text-slate-100 dark:text-slate-800 -z-0"
+                >format_quote</span
+              >
+              <div class="relative z-10">
+                <div class="flex gap-1 text-yellow-400 mb-6">
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined !text-[20px] fill-current"
+                    >star</span
+                  >
+                </div>
+                <p
+                  class="text-lg text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed"
+                >
+                  "From the initial consultation to the final launch, the
+                  process was seamless. The app they built for us has become the
+                  core of our customer engagement strategy."
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    alt="Michael C."
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPUwvANL3wsUj6tvCbCg9BKuz4ROBE5yZTT1v4Ammdz6yH6R21tyR7-RSgCrh08a4G7AQpSOLBm_iZdgBy-_OAU7-2VJ8-J8CvuOQeSnafewhf0I19zZtDvnmmWFh8RtGZC0XoMvU6ISBW0QL4xJd42rm3ccjqN1Gzar27DafO5CLtFMyxdPlIqIoVIMSAJVLGWMVP5yqKN9QTtmcQhxaEvkiOFB3W96LznqtK5HgqIpIIE02JPrxXxoZZ68A-y_iTyjEycbrtEaw"
+                  />
+                  <div>
+                    <h4 class="font-bold dark:text-white">Michael Chen</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                      Founder, StartUp Go
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="py-20 bg-primary/90 relative overflow-hidden">
+        <div
+          class="absolute inset-0 opacity-10"
+          style="
+            background-image: radial-gradient(#fff 1px, transparent 1px);
+            background-size: 32px 32px;
+          "
+        ></div>
+        <div class="relative max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-6">
+            Ready to scale your business?
+          </h2>
+          <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+            Let's discuss how Clovix can help you build the digital future of
+            your brand today.
+          </p>
+          <a
+            href="./contact.html"
+            class="bg-white text-primary hover:bg-slate-100 px-8 py-4 rounded-lg font-bold text-lg shadow-xl transition-transform hover:-translate-y-1"
+          >
+            Start Your Project
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-[#0b0a14] text-white pt-20 pb-10 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Section -->
+          <div class="flex flex-col gap-6">
+            <a href="index.html" class="flex items-center gap-2 text-white">
+              <img
+                src="assets/images/white-clovix.png"
+                alt="Clovix Logo"
+                class="h-8 w-auto"
+              />
+            </a>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Clovix is a full-service digital agency helping brands navigate
+              the complexities of the modern digital landscape.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">TW</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">LI</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">IG</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="development.html"
+                  >Development</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="branding.html"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="marketing.html"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >SEO</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Stay Updated</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              Subscribe to our newsletter for the latest digital trends.
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-lg p-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-slate-500"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <button
+                class="bg-primary hover:bg-primary-hover text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-slate-500 text-sm">
+            © 2024 Clovix Agency. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Privacy Policy</a
+            >
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="flex items-center justify-between mb-8">
+        <img
+          src="assets/images/white-clovix.png"
+          alt="Clovix Logo"
+          class="h-8 w-auto"
+        />
+        <button id="mobile-menu-close" class="text-white p-2">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+
+        <button id="mobile-dropdown-toggle" class="mobile-dropdown-toggle">
+          <span>Services</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+          <a href="development.html" class="mobile-dropdown-item"
+            >Development</a
+          >
+          <a href="branding.html" class="mobile-dropdown-item"
+            >Branding & Design</a
+          >
+          <a href="marketing.html" class="mobile-dropdown-item">Marketing</a>
+        </div>
+
+        <a href="projects.html" class="mobile-nav-link">Projects</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+
+      <div class="mt-8">
+        <a
+          href="contact.html"
+          class="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 flex items-center justify-center"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Common JavaScript -->
+    <script src="assets/js/common.js"></script>
+  </body>
+</html>

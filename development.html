@@ -1,0 +1,987 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Web &amp; App Development Services - Clovix</title>
+    <link rel="icon" type="image/png" href="assets/images/clovix.png" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="global.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Framer Motion CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.0.8/dist/framer-motion.js"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6255e7",
+              "primary-hover": "#5044c9",
+              "background-light": "#f6f6f8",
+              "background-dark": "#131121",
+              "surface-dark": "#1d1b32",
+              "border-dark": "#282546",
+              "text-secondary": "#9995c6",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white"
+  >
+    <!-- Top Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-[#282546] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/white-clovix.png"
+              alt="Clovix Logo"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex gap-8 items-center">
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <div class="nav-dropdown">
+              <a
+                class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                >Services</a
+              >
+              <div class="nav-dropdown-menu">
+                <a href="development.html" class="nav-dropdown-item"
+                  >Development</a
+                >
+                <a href="branding.html" class="nav-dropdown-item"
+                  >Branding & Design</a
+                >
+                <a href="marketing.html" class="nav-dropdown-item">Marketing</a>
+              </div>
+            </div>
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="projects.html"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="about.html"
+              >About</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+            >
+              Request a Quote
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-toggle"
+              class="text-slate-600 dark:text-white p-2"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center overflow-hidden"
+      >
+        <!-- Background Glow -->
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-[80px] pointer-events-none"
+        ></div>
+        <div class="layout-container max-w-[1280px] w-full px-4 sm:px-10 py-10">
+          <div class="@container">
+            <div
+              class="flex flex-col gap-10 px-4 py-10 lg:flex-row items-center"
+            >
+              <div class="flex flex-col gap-8 flex-1 lg:max-w-[600px] z-10">
+                <div class="flex flex-col gap-4 text-left">
+                  <div
+                    class="inline-flex items-center gap-2 self-start rounded-full bg-surface-dark border border-border-dark px-3 py-1"
+                  >
+                    <span class="relative flex h-2 w-2">
+                      <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+                      ></span>
+                      <span
+                        class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+                      ></span>
+                    </span>
+                    <span class="text-xs font-medium text-text-secondary"
+                      >Accepting new projects</span
+                    >
+                  </div>
+                  <h1
+                    class="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
+                  >
+                    Transforming Ideas into
+                    <span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400"
+                      >Digital Reality</span
+                    >
+                  </h1>
+                  <p
+                    class="text-text-secondary text-lg md:text-xl font-normal leading-relaxed max-w-[540px]"
+                  >
+                    We craft scalable web and mobile solutions tailored to your
+                    business needs, powered by cutting-edge technology stacks.
+                  </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="contact.html"
+                    class="flex items-center justify-center h-12 px-8 bg-primary hover:bg-primary-hover text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/25"
+                  >
+                    Start Your Project
+                  </a>
+                  <a
+                    href="projects.html"
+                    class="flex items-center justify-center h-12 px-8 bg-surface-dark border border-border-dark hover:border-primary/50 text-white text-base font-bold rounded-lg transition-all group"
+                  >
+                    <span>View Our Work</span>
+                    <span
+                      class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+                <div class="flex gap-8 pt-4">
+                  <div>
+                    <p class="text-3xl font-bold text-white">150+</p>
+                    <p class="text-sm text-text-secondary">Projects Launched</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-bold text-white">98%</p>
+                    <p class="text-sm text-text-secondary">
+                      Client Satisfaction
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex-1 w-full lg:h-auto z-10 flex justify-center lg:justify-end"
+              >
+                <!-- Abstract 3D/Tech Illustration Placeholder -->
+                <div
+                  class="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-surface-dark to-[#0c0a18] border border-border-dark flex items-center justify-center group"
+                  data-alt="Abstract 3D illustration representing software architecture and mobile devices floating in a dark digital space"
+                >
+                  <div
+                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay"
+                  ></div>
+                  <div
+                    class="relative z-10 grid grid-cols-2 gap-4 p-6 rotate-[-5deg] transform group-hover:rotate-0 transition-transform duration-700 ease-out"
+                  >
+                    <div
+                      class="bg-background-dark/80 backdrop-blur-md p-4 rounded-xl border border-border-dark shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-blue-400 mb-2"
+                        >code</span
+                      >
+                      <div class="h-2 w-20 bg-border-dark rounded mb-2"></div>
+                      <div class="h-2 w-12 bg-border-dark rounded"></div>
+                    </div>
+                    <div
+                      class="bg-background-dark/80 backdrop-blur-md p-4 rounded-xl border border-border-dark shadow-xl mt-8"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-primary mb-2"
+                        >smartphone</span
+                      >
+                      <div class="h-2 w-20 bg-border-dark rounded mb-2"></div>
+                      <div class="h-2 w-12 bg-border-dark rounded"></div>
+                    </div>
+                    <div
+                      class="bg-background-dark/80 backdrop-blur-md p-4 rounded-xl border border-border-dark shadow-xl -mt-8"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-purple-400 mb-2"
+                        >database</span
+                      >
+                      <div class="h-2 w-20 bg-border-dark rounded mb-2"></div>
+                      <div class="h-2 w-12 bg-border-dark rounded"></div>
+                    </div>
+                    <div
+                      class="bg-background-dark/80 backdrop-blur-md p-4 rounded-xl border border-border-dark shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-4xl text-green-400 mb-2"
+                        >cloud</span
+                      >
+                      <div class="h-2 w-20 bg-border-dark rounded mb-2"></div>
+                      <div class="h-2 w-12 bg-border-dark rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section class="py-20 bg-background-dark relative">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+          >
+            <div>
+              <span
+                class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block"
+                >Our Expertise</span
+              >
+              <h2
+                class="text-white text-3xl md:text-4xl font-bold leading-tight"
+              >
+                Core Services
+              </h2>
+            </div>
+            <p class="text-text-secondary max-w-md">
+              We don't just write code; we build engines for your business
+              growth using specific, scalable technologies.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div
+              class="group relative flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
+            >
+              <div
+                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >desktop_mac</span
+                >
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <h3 class="text-white text-xl font-bold">Full-Stack Web</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  High-performance custom CMS, Single Page Applications (SPAs),
+                  and Progressive Web Apps (PWAs) built for scale and speed.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 mt-auto pt-4">
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  React
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Next.js
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Node.js
+                </li>
+              </ul>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="group relative flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
+            >
+              <div
+                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >smartphone</span
+                >
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <h3 class="text-white text-xl font-bold">Mobile Apps</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Native iOS and Android development alongside cross-platform
+                  Flutter solutions for maximum reach and consistent UX.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 mt-auto pt-4">
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  iOS
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Android
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Flutter
+                </li>
+              </ul>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="group relative flex flex-col gap-4 rounded-2xl border border-border-dark bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
+            >
+              <div
+                class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >shopping_cart</span
+                >
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <h3 class="text-white text-xl font-bold">E-commerce</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  Robust Shopify and WooCommerce implementations or completely
+                  custom headless storefronts designed to convert.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 mt-auto pt-4">
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Shopify
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  WooCommerce
+                </li>
+                <li
+                  class="text-xs font-medium text-slate-300 bg-border-dark px-2 py-1 rounded"
+                >
+                  Stripe
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack Section -->
+      <section class="py-20 border-t border-border-dark bg-[#0e0c1a]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+          <div class="text-center mb-16">
+            <h2 class="text-white text-3xl font-bold mb-4">
+              Powered by Modern Technology
+            </h2>
+            <p class="text-text-secondary max-w-2xl mx-auto">
+              We leverage the most reliable and innovative frameworks to ensure
+              your product is future-proof.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 animate-scale"
+          >
+            <!-- React -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg"
+                alt="React"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300 brightness-0 invert"
+                style="
+                  filter: invert(70%) sepia(98%) saturate(2476%)
+                    hue-rotate(162deg) brightness(101%) contrast(101%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">React</span>
+            </div>
+            <!-- Node.js -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg"
+                alt="Node.js"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(69%) sepia(73%) saturate(422%)
+                    hue-rotate(72deg) brightness(95%) contrast(87%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">Node.js</span>
+            </div>
+            <!-- JavaScript -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg"
+                alt="JavaScript"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(88%) sepia(64%) saturate(2799%)
+                    hue-rotate(359deg) brightness(104%) contrast(102%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">JavaScript</span>
+            </div>
+            <!-- Flutter -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flutter.svg"
+                alt="Flutter"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(53%) sepia(98%) saturate(1595%)
+                    hue-rotate(181deg) brightness(102%) contrast(101%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">Flutter</span>
+            </div>
+            <!-- AWS -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg"
+                alt="AWS"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(66%) sepia(54%) saturate(4245%)
+                    hue-rotate(354deg) brightness(101%) contrast(101%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">AWS</span>
+            </div>
+            <!-- Next.js -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg"
+                alt="Next.js"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300 brightness-0 invert"
+              />
+              <span class="text-slate-300 font-medium text-sm">Next.js</span>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-4 animate-scale"
+          >
+            <!-- TypeScript -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/typescript.svg"
+                alt="TypeScript"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(39%) sepia(98%) saturate(1583%)
+                    hue-rotate(195deg) brightness(97%) contrast(92%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">TypeScript</span>
+            </div>
+            <!-- Docker -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg"
+                alt="Docker"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(53%) sepia(45%) saturate(1595%)
+                    hue-rotate(169deg) brightness(97%) contrast(101%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">Docker</span>
+            </div>
+            <!-- GraphQL -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/graphql.svg"
+                alt="GraphQL"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(36%) sepia(100%) saturate(1930%)
+                    hue-rotate(294deg) brightness(90%) contrast(95%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">GraphQL</span>
+            </div>
+            <!-- MongoDB -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mongodb.svg"
+                alt="MongoDB"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(65%) sepia(20%) saturate(1615%)
+                    hue-rotate(89deg) brightness(90%) contrast(85%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">MongoDB</span>
+            </div>
+            <!-- Figma -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/figma.svg"
+                alt="Figma"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300 brightness-0 invert"
+              />
+              <span class="text-slate-300 font-medium text-sm">Figma</span>
+            </div>
+            <!-- Auth0 -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-6 rounded-xl border border-border-dark bg-surface-dark/50 hover:bg-surface-dark hover:border-primary/30 transition-all cursor-default group"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/auth0.svg"
+                alt="Auth0"
+                class="w-12 h-12 group-hover:scale-110 transition-transform duration-300"
+                style="
+                  filter: invert(53%) sepia(89%) saturate(3283%)
+                    hue-rotate(338deg) brightness(101%) contrast(90%);
+                "
+              />
+              <span class="text-slate-300 font-medium text-sm">Auth0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process Section -->
+      <section class="py-24 bg-background-dark overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+          <div class="mb-16">
+            <span
+              class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block"
+              >Workflow</span
+            >
+            <h2 class="text-white text-3xl md:text-4xl font-bold">
+              Our Development Process
+            </h2>
+          </div>
+          <div class="relative">
+            <!-- Line connecting steps (Desktop) -->
+            <div
+              class="hidden lg:block absolute top-12 left-0 w-full h-1 bg-gradient-to-r from-border-dark via-primary to-border-dark rounded-full -z-10 opacity-30"
+            ></div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 items-start justify-items-center md:justify-items-start"
+            >
+              <!-- Step 1 -->
+              <div class="flex flex-col gap-4 relative group animate-fade-in">
+                <div
+                  class="size-24 rounded-2xl bg-surface-dark border border-border-dark flex items-center justify-center shadow-lg relative z-10 group-hover:border-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-3xl text-primary"
+                    >search</span
+                  >
+                  <div
+                    class="absolute -top-3 -right-3 size-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md"
+                  >
+                    1
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-bold mb-2">Discovery</h3>
+                  <p class="text-text-secondary text-sm">
+                    We analyze your requirements, market, and goals to build a
+                    roadmap.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="flex flex-col gap-4 relative group animate-fade-in">
+                <div
+                  class="size-24 rounded-2xl bg-surface-dark border border-border-dark flex items-center justify-center shadow-lg relative z-10 group-hover:border-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-3xl text-primary"
+                    >brush</span
+                  >
+                  <div
+                    class="absolute -top-3 -right-3 size-8 rounded-full bg-surface-dark border border-border-dark text-white flex items-center justify-center font-bold text-sm shadow-md"
+                  >
+                    2
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-bold mb-2">Design</h3>
+                  <p class="text-text-secondary text-sm">
+                    Creating intuitive UI/UX wireframes and prototypes that
+                    align with your brand.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="flex flex-col gap-4 relative group animate-fade-in">
+                <div
+                  class="size-24 rounded-2xl bg-surface-dark border border-border-dark flex items-center justify-center shadow-lg relative z-10 group-hover:border-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-3xl text-primary"
+                    >code</span
+                  >
+                  <div
+                    class="absolute -top-3 -right-3 size-8 rounded-full bg-surface-dark border border-border-dark text-white flex items-center justify-center font-bold text-sm shadow-md"
+                  >
+                    3
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-bold mb-2">Develop</h3>
+                  <p class="text-text-secondary text-sm">
+                    Agile coding sprints to bring the design to life with clean,
+                    scalable code.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="flex flex-col gap-4 relative group animate-fade-in">
+                <div
+                  class="size-24 rounded-2xl bg-surface-dark border border-border-dark flex items-center justify-center shadow-lg relative z-10 group-hover:border-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-3xl text-primary"
+                    >bug_report</span
+                  >
+                  <div
+                    class="absolute -top-3 -right-3 size-8 rounded-full bg-surface-dark border border-border-dark text-white flex items-center justify-center font-bold text-sm shadow-md"
+                  >
+                    4
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-bold mb-2">Test</h3>
+                  <p class="text-text-secondary text-sm">
+                    Rigorous QA testing on multiple devices to ensure a bug-free
+                    experience.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 5 -->
+              <div class="flex flex-col gap-4 relative group animate-fade-in">
+                <div
+                  class="size-24 rounded-2xl bg-surface-dark border border-border-dark flex items-center justify-center shadow-lg relative z-10 group-hover:border-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-3xl text-primary"
+                    >rocket_launch</span
+                  >
+                  <div
+                    class="absolute -top-3 -right-3 size-8 rounded-full bg-surface-dark border border-border-dark text-white flex items-center justify-center font-bold text-sm shadow-md"
+                  >
+                    5
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-bold mb-2">Launch</h3>
+                  <p class="text-text-secondary text-sm">
+                    Deployment to production servers, app store submission, and
+                    post-launch support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section
+        class="py-20 bg-background-dark border-t border-border-dark relative overflow-hidden"
+      >
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-primary/5"></div>
+        <div
+          class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"
+        ></div>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10 relative z-10">
+          <div
+            class="rounded-3xl bg-gradient-to-br from-surface-dark to-[#0f0e1d] border border-border-dark p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10"
+          >
+            <div class="max-w-2xl">
+              <h2
+                class="text-white text-3xl md:text-5xl font-bold leading-tight mb-4"
+              >
+                Ready to build your next big idea?
+              </h2>
+              <p class="text-text-secondary text-lg">
+                Let's discuss how Clovix can help you achieve your digital goals
+                with a custom solution.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 min-w-[200px]">
+              <a
+                href="contact.html"
+                class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-xl shadow-primary/20 hover:shadow-primary/40 transform hover:-translate-y-1"
+              >
+                Get a Free Quote
+              </a>
+              <p class="text-center text-sm text-text-secondary">
+                No credit card required
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-[#0b0a14] text-white pt-20 pb-10 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Section -->
+          <div class="flex flex-col gap-6">
+            <a href="index.html" class="flex items-center gap-2 text-white">
+              <img
+                src="assets/images/white-clovix.png"
+                alt="Clovix Logo"
+                class="h-8 w-auto"
+              />
+            </a>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Clovix is a full-service digital agency helping brands navigate
+              the complexities of the modern digital landscape.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">TW</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">LI</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">IG</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="development.html"
+                  >Development</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="branding.html"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="marketing.html"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >SEO</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Stay Updated</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              Subscribe to our newsletter for the latest digital trends.
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-lg p-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-slate-500"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <button
+                class="bg-primary hover:bg-primary-hover text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-slate-500 text-sm">
+            © 2024 Clovix Agency. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Privacy Policy</a
+            >
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="flex items-center justify-between mb-8">
+        <img
+          src="assets/images/white-clovix.png"
+          alt="Clovix Logo"
+          class="h-8 w-auto"
+        />
+        <button id="mobile-menu-close" class="text-white p-2">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+
+        <button id="mobile-dropdown-toggle" class="mobile-dropdown-toggle">
+          <span>Services</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+          <a href="development.html" class="mobile-dropdown-item"
+            >Development</a
+          >
+          <a href="branding.html" class="mobile-dropdown-item"
+            >Branding & Design</a
+          >
+          <a href="marketing.html" class="mobile-dropdown-item">Marketing</a>
+        </div>
+
+        <a href="projects.html" class="mobile-nav-link">Projects</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+
+      <div class="mt-8">
+        <a
+          href="contact.html"
+          class="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 flex items-center justify-center"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Common JavaScript -->
+    <script src="assets/js/common.js"></script>
+  </body>
+</html>

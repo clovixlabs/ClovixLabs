@@ -1,0 +1,708 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clovix - Case Studies Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/clovix.png" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="global.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Framer Motion CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.0.8/dist/framer-motion.js"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6255e7",
+              "primary-hover": "#5044c9",
+              "background-light": "#f6f6f8",
+              "background-dark": "#131121",
+              "surface-dark": "#1e1c2e",
+              "surface-border": "#282546",
+              "text-secondary": "#9995c6",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-slate-900 dark:text-white overflow-x-hidden"
+  >
+    <!-- Top Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-[#282546] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <img
+              src="assets/images/white-clovix.png"
+              alt="Clovix Logo"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <!-- Navigation -->
+          <nav class="hidden md:flex gap-8 items-center">
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <div class="nav-dropdown">
+              <a
+                class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                >Services</a
+              >
+              <div class="nav-dropdown-menu">
+                <a href="development.html" class="nav-dropdown-item"
+                  >Development</a
+                >
+                <a href="branding.html" class="nav-dropdown-item"
+                  >Branding & Design</a
+                >
+                <a href="marketing.html" class="nav-dropdown-item">Marketing</a>
+              </div>
+            </div>
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="projects.html"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="about.html"
+              >About</a
+            >
+            <a
+              class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+              href="contact.html"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+            >
+              Request a Quote
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-toggle"
+              class="text-slate-600 dark:text-white p-2"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow flex flex-col items-center w-full">
+      <!-- Page Heading & Intro -->
+      <section class="w-full px-4 md:px-10 py-12 md:py-20 flex justify-center">
+        <div class="max-w-[1200px] w-full flex flex-col gap-6">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-surface-border pb-10"
+          >
+            <div class="flex flex-col gap-4 max-w-2xl">
+              <h1
+                class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-[-0.033em]"
+              >
+                Crafting Digital <span class="text-primary">Excellence</span>
+              </h1>
+              <p
+                class="text-text-secondary text-lg md:text-xl font-normal leading-relaxed max-w-[600px]"
+              >
+                Explore how Clovix transforms ideas into industry-leading
+                digital products through strategic design and engineering.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 shrink-0">
+              <div class="flex items-center gap-2 text-text-secondary">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                <span class="text-sm font-medium">50+ Successful Launches</span>
+              </div>
+            </div>
+          </div>
+          <!-- Filters -->
+          <div class="flex flex-wrap gap-3 py-4">
+            <button
+              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary px-6 transition-transform active:scale-95"
+            >
+              <span class="text-white text-sm font-bold">All Projects</span>
+            </button>
+            <button
+              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-surface-border px-6 hover:border-primary/50 transition-colors"
+            >
+              <span
+                class="text-text-secondary hover:text-white text-sm font-medium"
+                >Web Development</span
+              >
+            </button>
+            <button
+              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-surface-border px-6 hover:border-primary/50 transition-colors"
+            >
+              <span
+                class="text-text-secondary hover:text-white text-sm font-medium"
+                >Mobile Apps</span
+              >
+            </button>
+            <button
+              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-surface-border px-6 hover:border-primary/50 transition-colors"
+            >
+              <span
+                class="text-text-secondary hover:text-white text-sm font-medium"
+                >UI/UX Design</span
+              >
+            </button>
+            <button
+              class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-surface-border px-6 hover:border-primary/50 transition-colors"
+            >
+              <span
+                class="text-text-secondary hover:text-white text-sm font-medium"
+                >Branding</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Project Grid -->
+      <section class="w-full px-4 md:px-10 pb-20 flex justify-center">
+        <div class="max-w-[1200px] w-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            <!-- Card 1 - Web Development -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >Web Development</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Modern e-commerce platform dashboard showing analytics and inventory management"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD9Hwdy2AdUGi_sAgVZJcxswujPyG_u9oNvR4KkCZno4ah8GYWP1uBF4FxmqIhJkZK9K8dymgEm90fjINHDRD89qq4P62T9cX43WkBnPAZp4krc-4-7hVZ8SZwTknRIKlSGQAjZkDoWdVTkW8QBE-8ChwJUsDwI3piJ6nw481294zvnxB8tZrpBwIvntAbwUa-37InsAz_qSnyJ0Tqy3uRyCx_d3V5q-ALZxDLJ3wix91sJJWZQW9QB6k9Qnc-HnlcckeO1CC1LU60&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    E-Commerce Platform
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    Full-Stack Development • Payment Integration • Admin
+                    Dashboard
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Card 2 - Mobile App Development -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >Mobile Development</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Modern dark mode mobile application screens showing fitness tracking features"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCMqZDscWF491B_b_5hY2jZfWkhTZNIw0ZwDTBbQ4rREK2fLl0W17Hvy5jhq4cr7_EBc0RcAzlOjDAj5YL7bJHtVMIPSo63b0fqhCMET2BGkqJHTE_YkrboX0S8phxPBJmM8uU-tiHTuIxfPgVxyXHimRky5pnEfDFRDnZoChaoWpVdJ6JzRbAbf3_8BN3sk2LZLHTfPsxpW1WLSesLHTp9YajNEipclUdBwlbhXaGMNy2-I4yLWuBbxNm8-o-hLHhZNWTDP-vb8bU&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    Fitness Tracking App
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    iOS & Android • React Native • Cloud Integration
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Card 3 - Branding & Design -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >Branding & Design</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Modern brand identity showcase with logo variations and color palette"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAmJT_2dy0Ws5jMalospzcz78S2P5lr2x-JBpjkSGBt7JhetzZfkKuYJS1fHthIC5Ig0O29wX26wbJ89rlX5zAhTn_HhykY7NtgFd0mTE8YahNAi1CpHlFWpE8I74lPD0-hXRSmdz4zbP51nDxRVqh7quqPku-oAhEyImV6zBeENYYdeGRVbkSuoL9D-W2ueBepsAEnxMi0t6ItTbzmWxnphSuvqyQ9JJ_Wpi7XBFE51CX1ncoG6CN1kbm-LSTibnHVA0eMpa_GiTI&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    Luxury Fashion Brand
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    Complete Brand Identity • Logo Design • Brand Guidelines
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Card 4 - UI/UX Design -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >UI/UX Design</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Healthcare patient portal dashboard with appointment scheduling"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAvETfnmojb-Gn45LrrAHCCQMwVPer7LtYRK9HX3Qh9c8zq7M4JQBMVyRtHWavp59iMDghRDVWNHn7lNP72MJr91FSYX4ZQcsKE6lpksRQYIlIQf5YH-3PI12XaRXNaxCp1iFccXGGjaQkn07YMZHNDOcFARU6wxtrVSFSManQXCcl5qWOaDjfxrRP-NGhk6Igy24col3CXVwn5WVRI23NpIBspsRc52oTEKcBZOguWA06RGn8nDvRemCbCaTXaqFL6i9vtAUCj9Zc&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    Healthcare Patient Portal
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    User Research • Wireframing • Prototyping • Testing
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Card 5 - Marketing & SEO -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >Digital Marketing</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Marketing analytics dashboard showing traffic growth and conversion metrics"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBtgeOCE4ip0tT8Gfn9BEXRKeEMbO25bB1eTjrtzI783hsfgA-zjXfQSKLvInz-xsULoWutkbuz7T0mCNI9eOYZiLYq1hfuXpugQtIGijFPTF7WSrltXRfXejmNYOxcsusFcxGjb4XBi5zSh9sKC-rpxCLeiubarmb91O4neQd8stk9B2nymTCx5ZNkJ_fEJteBGfHu-It8DN-n3uEzkuohMbTGjBZTiwotn1fDWw0t1GbRbStkx2mJdS9_nhso0nJXr_oLWlObIm0&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    SaaS Growth Campaign
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    SEO Strategy • Content Marketing • PPC Campaigns • Analytics
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Card 6 - Content Creation -->
+            <div
+              class="card-hover-trigger group cursor-pointer flex flex-col gap-5 animate-fade-in"
+            >
+              <div
+                class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark ring-1 ring-white/5 shadow-2xl"
+              >
+                <div class="absolute top-4 left-4 z-10 flex gap-2">
+                  <span
+                    class="bg-black/60 backdrop-blur-md border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider"
+                    >Content & Social</span
+                  >
+                </div>
+
+                <div
+                  class="card-image w-full h-full bg-center bg-cover"
+                  data-alt="Social media content calendar and engagement metrics for travel brand"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC27gyn511zNvk3-Y1wpX9h9JfMXGEMscijDSUKAUYGarMfVU6Pe_-S1_pvQ5nWyiH3J7LBgzOg1ZW8czjFkJ_qfLX-EWZs33c4UbPyifyG4Xh9iBPodLMPcChwHYMLe7ECmg1l8X0QwyDZEsIK_SzU2tvQxH1Gf7iPkm8nGKM3ysr68zwcgCnnM2xZBTaHgrz08G8yqjKl2x1H8aTxF7Vgtf943HHilSbcW0ivPcrVGI8MyC21g3atmqY9Z9FLAYW4Muz63tG3Vb0&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h3
+                    class="text-white text-2xl font-bold leading-tight mb-1 group-hover:text-primary transition-colors"
+                  >
+                    Travel Brand Social Strategy
+                  </h3>
+                  <p class="text-text-secondary text-base">
+                    Content Strategy • Social Media • Influencer Marketing
+                  </p>
+                </div>
+                <button
+                  class="w-10 h-10 rounded-full border border-surface-border flex items-center justify-center text-white group-hover:bg-primary group-hover:border-primary transition-all"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >arrow_outward</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section
+        class="w-full px-4 md:px-10 py-10 md:py-24 bg-surface-dark border-t border-surface-border mt-auto"
+      >
+        <div
+          class="mx-auto max-w-[960px] flex flex-col items-center text-center gap-8"
+        >
+          <div class="flex flex-col gap-4">
+            <h2
+              class="text-white text-3xl md:text-5xl font-black leading-tight tracking-[-0.033em] max-w-2xl mx-auto"
+            >
+              Ready to transform your digital presence?
+            </h2>
+            <p
+              class="text-text-secondary text-lg font-normal leading-relaxed max-w-xl mx-auto"
+            >
+              We help ambitious brands build future-proof digital products.
+              Let's discuss your next breakthrough.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <a
+              href="contact.html"
+              class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-hover transition-colors text-white text-base font-bold shadow-lg shadow-primary/25"
+            >
+              <span class="truncate">Start a Project</span>
+            </a>
+            <a
+              href="development.html"
+              class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-surface-border hover:bg-surface-border transition-colors text-white text-base font-bold"
+            >
+              <span class="truncate">View Services</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-[#0b0a14] text-white pt-20 pb-10 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Section -->
+          <div class="flex flex-col gap-6">
+            <a href="index.html" class="flex items-center gap-2 text-white">
+              <img
+                src="assets/images/white-clovix.png"
+                alt="Clovix Logo"
+                class="h-8 w-auto"
+              />
+            </a>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Clovix is a full-service digital agency helping brands navigate
+              the complexities of the modern digital landscape.
+            </p>
+            <div class="flex gap-4">
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">TW</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">LI</span>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
+                href="#"
+              >
+                <span class="font-bold text-xs">IG</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="about.html"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="development.html"
+                  >Development</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="branding.html"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="marketing.html"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-slate-400 hover:text-primary transition-colors text-sm"
+                  href="#"
+                  >SEO</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div>
+            <h3 class="text-lg font-bold mb-6">Stay Updated</h3>
+            <p class="text-slate-400 text-sm mb-4">
+              Subscribe to our newsletter for the latest digital trends.
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                class="bg-slate-800/50 border border-slate-700 text-white text-sm rounded-lg p-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-slate-500"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <button
+                class="bg-primary hover:bg-primary-hover text-white py-2.5 rounded-lg text-sm font-bold transition-colors"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-slate-500 text-sm">
+            © 2024 Clovix Agency. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Privacy Policy</a
+            >
+            <a class="text-slate-500 hover:text-white text-sm" href="#"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="flex items-center justify-between mb-8">
+        <img
+          src="assets/images/white-clovix.png"
+          alt="Clovix Logo"
+          class="h-8 w-auto"
+        />
+        <button id="mobile-menu-close" class="text-white p-2">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+
+        <button id="mobile-dropdown-toggle" class="mobile-dropdown-toggle">
+          <span>Services</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+          <a href="development.html" class="mobile-dropdown-item"
+            >Development</a
+          >
+          <a href="branding.html" class="mobile-dropdown-item"
+            >Branding & Design</a
+          >
+          <a href="marketing.html" class="mobile-dropdown-item">Marketing</a>
+        </div>
+
+        <a href="projects.html" class="mobile-nav-link">Projects</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+
+      <div class="mt-8">
+        <a
+          href="contact.html"
+          class="w-full bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 flex items-center justify-center"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Common JavaScript -->
+    <script src="assets/js/common.js"></script>
+  </body>
+</html>
